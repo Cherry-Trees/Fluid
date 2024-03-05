@@ -5,8 +5,8 @@
 
 void Cell::update(sf::RenderWindow &window)
 {
-    this->sprite.setFillColor(sf::Color(std::max(std::min(q, 255.f), 10.f), 
+    sprite.setFillColor(sf::Color(std::max(std::min(q, 255.f), 10.f), 
                                         std::max(std::min(q/6, 255.f), 10.f), 
                                         std::max(std::min(q/3, 255.f), 10.f)));
-    window.draw(this->sprite);
+    window.draw(sprite);
 }
