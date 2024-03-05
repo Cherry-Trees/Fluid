@@ -2,7 +2,6 @@
 #include "globals.hpp"
 #include "functions.hpp"
 #include "Cell.hpp"
-#include <math.h>
 
 using namespace sf;
 
@@ -53,6 +52,7 @@ int main()
                         }
                     }
                 }
+                
                 if (Mouse::isButtonPressed(Mouse::Right)) {
 
                     Vector2i cell_indices = Mouse::getPosition(window) / PIXEL_DELTA;
@@ -66,9 +66,8 @@ int main()
                 }
             }
         }
+        
         window.clear();
-
-
         for (int y = 1; y < ROWS-1; ++y)
         {
             for (int x = 1; x < COLS-1; ++x)
@@ -77,7 +76,6 @@ int main()
                 U[y][x].update(window);
             }
         }
-        
         
         window.display();
     }
