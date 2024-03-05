@@ -41,10 +41,10 @@ int main()
             }
 
             if (event.type == Event::MouseMoved) {
+                
                 if (Mouse::isButtonPressed(Mouse::Left)) {
 
                     Vector2i cell_indices = Mouse::getPosition(window) / PIXEL_DELTA;
-
                     for (int i=cell_indices.y-2; i < cell_indices.y+2; i++)
                     {
                         for (int j=cell_indices.x-2; j < cell_indices.x+2; j++)
@@ -52,20 +52,17 @@ int main()
                             U[i][j].q += 200;
                         }
                     }
-                    // U[cell_indices.y][cell_indices.x].q += 100;    
                 }
                 if (Mouse::isButtonPressed(Mouse::Right)) {
 
                     Vector2i cell_indices = Mouse::getPosition(window) / PIXEL_DELTA;
-
                     for (int i=cell_indices.y-2; i < cell_indices.y+2; i++)
                     {
                         for (int j=cell_indices.x-2; j < cell_indices.x+2; j++)
                         {
                             U[i][j].q -= 200;
                         }
-                    }
-                    // U[cell_indices.y][cell_indices.x].q += 100;    
+                    }  
                 }
             }
         }
