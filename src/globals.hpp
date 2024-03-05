@@ -10,4 +10,3 @@
 
 #define DELTA 1
 #define a 25
-#define PI 3.1415926535897932
